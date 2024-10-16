@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ea9d6f-0367-443b-90da-75231a51434a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/Utils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/business/ConvidadoBusiness.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/business/ConviteBusiness.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/business/TipoConviteBusiness.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/control/Console.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/control/Portaria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/entity/Convite.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/entity/Pessoa.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/enums/ResultadoPortaria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/enums/TipoConvite.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/enums/ValidacaoConvidado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/Utils.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +39,20 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2nUSM0p5oerBVvKUfyNf6JFQxSg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,14 +67,28 @@
     "JUnit.MainTest.executor": "Debug",
     "Kotlin.MainKt.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Estudos/Course_AndroidKotlinDevelopment_GF/Section 16 - Projeto orientado a objetos - Portaria/Projects/Portaria",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Estudos\Course_AndroidKotlinDevelopment_GF\Section 16 - Projeto orientado a objetos - Portaria\Projects\Portaria\src\main\kotlin" />
+      <recent name="C:\Estudos\Course_AndroidKotlinDevelopment_GF\Section 16 - Projeto orientado a objetos - Portaria\Projects\Portaria\src" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="control" />
+      <recent name="entity" />
+      <recent name="classes" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="Portaria.main" />
       <method v="2">
         <option name="Make" enabled="true" />
