@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Entendendo LinearLayout</string>
+    <string name="entendendo_linearlayout">LinearLayout</string>
+    <string name="nome_completo_hint">Nome completo</string>
+    <string name="data_de_nascimento_hint">Data de nascimento</string>
+    <string name="numero_de_telefone_hint">Número de telefone</string>
+    <string name="senha_numerica_hint">Senha númerica</string>
+    <string name="senha_hint">Senha</string>
+    <string name="numero_favorito_hint">Número favorito</string>
+    <string name="endereco_de_email_hint">Endereço de email</string>
+    <string name="imageview_contentDescription">Imagem do ícone da aplicação.</string>
+    <string name="imageview_grass_contentDescription">Imagem de uma grama.</string>
+</resources>
