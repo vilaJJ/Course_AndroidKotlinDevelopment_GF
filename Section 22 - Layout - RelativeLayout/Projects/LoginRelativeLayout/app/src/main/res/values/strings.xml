@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Login (RelativeLayout)</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up_new_user">Ainda não cadastrado? Cadastre-se!</string>
+    <string name="forgot_your_password">Esqueceu sua senha?</string>
+    <string name="interrogation_symbol_content_description">Um ícone de um sinal de interrogação.</string>
+</resources>

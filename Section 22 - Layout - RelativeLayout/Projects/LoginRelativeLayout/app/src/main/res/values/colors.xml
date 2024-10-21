@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="tealish_green">#08AD7F</color>
+    <color name="spun_pearl">#A9A8AA</color>
+    <color name="gainsboro">#DADADA</color>
+</resources>
