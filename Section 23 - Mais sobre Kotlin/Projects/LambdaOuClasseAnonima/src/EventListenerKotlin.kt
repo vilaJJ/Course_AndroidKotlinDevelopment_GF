@@ -1,0 +1,3 @@
+interface EventListenerKotlin {
+    fun click()
+}
