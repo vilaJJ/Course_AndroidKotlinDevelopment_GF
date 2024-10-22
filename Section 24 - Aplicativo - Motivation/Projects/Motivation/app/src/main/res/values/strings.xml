@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="button_inspire_content_description">Botão com ícone de infinito.</string>
+    <string name="button_happiness_content_description">Botão com ícone de alegria.</string>
+    <string name="button_illuminate_content_description">Botão com ícone do sol.</string>
+    <string name="user_welcome_default">Olá, usuário!</string>
+    <string name="new_phrase">Nova frase</string>
+    <string name="frase_de_motivacao">Frase de motivação</string>
+</resources>
