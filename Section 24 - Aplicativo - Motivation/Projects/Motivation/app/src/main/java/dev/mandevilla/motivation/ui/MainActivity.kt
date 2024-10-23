@@ -3,15 +3,21 @@ package dev.mandevilla.motivation.ui
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import dev.mandevilla.motivation.constants.SharedPreferencesConstants
+import dev.mandevilla.motivation.infra.SharedPreferencesConstants
 import dev.mandevilla.motivation.R
 import dev.mandevilla.motivation.databinding.ActivityMainBinding
-import dev.mandevilla.motivation.services.SharedPreferencesService
+import dev.mandevilla.motivation.entity.PhraseType
+import dev.mandevilla.motivation.repository.phrases.MockPhrasesRepository
+import dev.mandevilla.motivation.repository.phrases.interfaces.PhrasesRepository
+import dev.mandevilla.motivation.service.SharedPreferencesService
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
+    private var phraseOption: PhraseType? = null
+    private val phrasesRepository: PhrasesRepository = MockPhrasesRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,21 +30,71 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
-        setOnClickListenerComponents()
-        loadUserName()
+        initializeActions()
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
             binding.buttonNewPhrase.id -> showNewPhrase()
+            binding.imageButtonAll.id,
+            binding.imageButtonHappy.id,
+            binding.imageButtonSunny.id -> handleFilterOptions(view)
         }
     }
 
+    private fun initializeActions() {
+        setOnClickListenerComponents()
+        loadUserName()
+        handleFilterOptions(binding.imageButtonAll)
+    }
+
     private fun setOnClickListenerComponents() {
+        binding.imageButtonAll.setOnClickListener(this)
+        binding.imageButtonHappy.setOnClickListener(this)
+        binding.imageButtonSunny.setOnClickListener(this)
         binding.buttonNewPhrase.setOnClickListener(this)
     }
 
-    private fun showNewPhrase() {}
+    private fun handleFilterOptions(view: View?) {
+        if (view == null)
+            return
+
+        val activeColor = ContextCompat.getColor(this, R.color.white)
+        val inactiveColor = ContextCompat.getColor(this, R.color.eggplant_purple)
+
+        var phraseType: PhraseType? = null
+
+        val options = listOf(
+            binding.imageButtonAll,
+            binding.imageButtonHappy,
+            binding.imageButtonSunny
+        )
+
+        for (option in options.withIndex()) {
+            with(option) {
+                val color: Int
+
+                if (value.id == view.id) {
+                    color = activeColor
+                    phraseType = PhraseType.getById(index)
+                } else {
+                    color = inactiveColor
+                }
+
+                value.setColorFilter(color)
+            }
+        }
+
+        if (phraseType != phraseOption) {
+            phraseOption = phraseType
+            showNewPhrase()
+        }
+    }
+
+    private fun showNewPhrase() {
+        val phrase = phrasesRepository.getPhrase(phraseOption)
+        binding.textPhrase.text = phrase.text
+    }
 
     private fun loadUserName() {
         val hello = getString(R.string.hello)

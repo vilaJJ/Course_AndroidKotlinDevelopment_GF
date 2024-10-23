@@ -10,11 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dev.mandevilla.motivation.business.UserBusiness
 import dev.mandevilla.motivation.business.enums.UserValidateResult
-import dev.mandevilla.motivation.constants.SharedPreferencesConstants
+import dev.mandevilla.motivation.infra.SharedPreferencesConstants
 import dev.mandevilla.motivation.R
 import dev.mandevilla.motivation.databinding.ActivityUserBinding
 import dev.mandevilla.motivation.entity.User
-import dev.mandevilla.motivation.services.SharedPreferencesService
+import dev.mandevilla.motivation.service.SharedPreferencesService
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityUserBinding
