@@ -6,4 +6,11 @@
     <string name="user_welcome_default">Olá, usuário!</string>
     <string name="new_phrase">Nova frase</string>
     <string name="frase_de_motivacao">Frase de motivação</string>
+    <string name="lets_start">Vamos começar?</string>
+    <string name="whats_your_name">Qual é o seu nome?</string>
+    <string name="save">Salvar</string>
+    <string name="insert_a_invalid_user_name">Insira um nome de usuário válido.</string>
+    <string name="unknown_field_validation">Verifique se todos os campos estão preenchidos corretamente.</string>
+    <string name="hello">Olá</string>
+    <string name="user">Usuário</string>
 </resources>

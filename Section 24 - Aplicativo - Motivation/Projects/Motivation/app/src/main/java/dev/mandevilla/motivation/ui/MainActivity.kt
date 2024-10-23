@@ -1,13 +1,14 @@
-package dev.mandevilla.motivation
+package dev.mandevilla.motivation.ui
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import dev.mandevilla.motivation.constants.SharedPreferencesConstants
+import dev.mandevilla.motivation.R
 import dev.mandevilla.motivation.databinding.ActivityMainBinding
+import dev.mandevilla.motivation.services.SharedPreferencesService
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         setOnClickListenerComponents()
+        loadUserName()
     }
 
     override fun onClick(view: View?) {
@@ -37,4 +39,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showNewPhrase() {}
+
+    private fun loadUserName() {
+        val hello = getString(R.string.hello)
+        val userName = getUserNameFromPreferences() ?: R.string.user.toString().lowercase()
+
+        val valueToShow = "$hello, $userName!"
+        binding.textUserName.text = valueToShow
+    }
+
+    private fun getUserNameFromPreferences(): String? {
+        with(SharedPreferencesService(this)) {
+            return getString(SharedPreferencesConstants.Keys.USER_NAME)
+        }
+    }
 }
