@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="dark_charcoal">#323232</color>
+    <color name="transparent">#00000000</color>
+    <color name="byzantium">#7E2A68</color>
+    <color name="tyrian_purple">#610E47</color>
+    <color name="pansy_purple">#760754</color>
+    <color name="eggplant_purple">#470B34</color>
+    <color name="lighter_purple">#CF81AB</color>
+</resources>
