@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="button_inspire_content_description">Button with icon of infinity.</string>
+    <string name="button_happiness_content_description">Button with icon of happy.</string>
+    <string name="button_illuminate_content_description">Button with icon of sun.</string>
+    <string name="user_welcome_default">Hello, user!</string>
+    <string name="new_phrase">New phrase</string>
+    <string name="frase_de_motivacao">Motivational phrases</string>
+    <string name="lets_start">Let\'s get start?</string>
+    <string name="whats_your_name">What\'s your name?</string>
+    <string name="save">Save</string>
+    <string name="insert_a_invalid_user_name">Insert a valid user name.</string>
+    <string name="unknown_field_validation">Check if all the fields are correct filled.</string>
+    <string name="hello">Hello</string>
+    <string name="user">User</string>
+    <string name="phrase_not_found">Phrase not found.</string>
+</resources>
