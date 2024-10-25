@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ConstraintLayout Coffee</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="button_back_context_description">Botão para voltar para a tela anterior.</string>
+    <string name="coffee_time_prepare">15 minutos</string>
+    <string name="coffee_number_favorite">54214</string>
+    <string name="cappuccino_description">Uma simples e perfeitamente extraída dose de espresso misturado com leite fresco e chocolate fazem esta bebida deliciosa.</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="ingredient_3">Uma colher de chocolate em pó</string>
+    <string name="ingredient_2">100ml de leite</string>
+    <string name="ingredient_1">Uma dose de espresso</string>
+    <string name="icon_access_time_content_description">Ícone de um relógio.</string>
+    <string name="icon_favorite_content_description">Ícone de um coração.</string>
+</resources>

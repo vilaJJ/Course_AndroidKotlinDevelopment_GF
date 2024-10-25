@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConstraintLayout Login</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="sign_up_text">Ainda não é cadastrado? Cadastre-se!</string>
+</resources>

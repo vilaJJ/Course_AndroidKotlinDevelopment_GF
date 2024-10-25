@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/text_coffee_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_chestnut"
+            android:gravity="center"
+            android:paddingVertical="48dp"
+            android:text="@string/cappuccino"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_arrow_back"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/button_back_context_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_access_time"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/icon_access_time_content_description"
+            android:src="@drawable/ic_access_time"
+            app:layout_constraintEnd_toStartOf="@id/image_favorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_coffee_name"
+            app:tint="@color/dark_chestnut" />
+
+        <TextView
+            android:id="@+id/text_coffee_time_prepare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/coffee_time_prepare"
+            android:textColor="@color/granity_gray"
+            app:layout_constraintEnd_toEndOf="@id/image_access_time"
+            app:layout_constraintStart_toStartOf="@id/image_access_time"
+            app:layout_constraintTop_toBottomOf="@id/image_access_time" />
+
+        <ImageView
+            android:id="@+id/image_favorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/icon_favorite_content_description"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_access_time"
+            app:layout_constraintTop_toBottomOf="@id/text_coffee_name"
+            app:tint="@color/dark_chestnut" />
+
+        <TextView
+            android:id="@+id/text_coffe_number_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/coffee_number_favorite"
+            android:textColor="@color/granity_gray"
+            app:layout_constraintEnd_toEndOf="@id/image_favorite"
+            app:layout_constraintStart_toStartOf="@id/image_favorite"
+            app:layout_constraintTop_toBottomOf="@id/image_favorite" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@color/dark_chestnut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_coffee_time_prepare" />
+
+        <TextView
+            android:id="@+id/text_coffee_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/cappuccino_description"
+            android:textAlignment="center"
+            android:textColor="@color/granity_gray"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+        <TextView
+            android:id="@+id/text_ingredients_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/ingredients"
+            android:textColor="@color/granity_gray"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_coffee_description" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_ingredients_title">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:gravity="center"
+                android:text="@string/ingredient_1"
+                android:textColor="@color/granity_gray"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_arrow_forward"
+                app:drawableTint="@color/dark_chestnut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:gravity="center"
+                android:text="@string/ingredient_2"
+                android:textColor="@color/granity_gray"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_arrow_forward"
+                app:drawableTint="@color/dark_chestnut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:gravity="center"
+                android:text="@string/ingredient_3"
+                android:textColor="@color/granity_gray"
+                android:textStyle="bold"
+                app:drawableLeftCompat="@drawable/ic_arrow_forward"
+                app:drawableTint="@color/dark_chestnut" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

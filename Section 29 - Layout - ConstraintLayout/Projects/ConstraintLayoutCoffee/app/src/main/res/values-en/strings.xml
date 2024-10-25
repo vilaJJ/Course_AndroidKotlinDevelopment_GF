@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ConstraintLayout Coffee</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="button_back_context_description">Button to back to previous screen.</string>
+    <string name="coffee_time_prepare">15 minutes</string>
+    <string name="coffee_number_favorite">54214</string>
+    <string name="cappuccino_description">A simple, perfectly extracted shot of espresso mixed with fresh milk and chocolate makes this delicious drink.</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="ingredient_3">A spoonful of chocolate powder</string>
+    <string name="ingredient_2">100ml of milk</string>
+    <string name="ingredient_1">A shot of espresso</string>
+    <string name="icon_access_time_content_description">Clock icon.</string>
+    <string name="icon_favorite_content_description">Heart icon.</string>
+</resources>
