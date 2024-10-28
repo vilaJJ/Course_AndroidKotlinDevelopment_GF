@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExemploMVVM</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="successful_login">Login realizado com sucesso.</string>
+    <string name="incorrect_login">Login incorreto. Verifique suas credenciais.</string>
+</resources>
