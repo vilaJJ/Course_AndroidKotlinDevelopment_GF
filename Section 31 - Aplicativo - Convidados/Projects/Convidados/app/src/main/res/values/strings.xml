@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Convidados</string>
+    <string name="app_name">Guests</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -7,8 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_all_guests">All Guests</string>
+    <string name="menu_presents">Presents</string>
+    <string name="menu_absents">Absents</string>
     <string name="a_floating_action_button_to_add_a_guest">A Floating Action Button to add a guest.</string>
+    <string name="guest_register">Guest register</string>
+    <string name="name">Name</string>
+    <string name="presence">Presence</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="save">Save</string>
 </resources>
