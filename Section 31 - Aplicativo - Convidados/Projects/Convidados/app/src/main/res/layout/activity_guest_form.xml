@@ -26,7 +26,7 @@
         android:layout_marginHorizontal="16dp"
         android:autofillHints="name"
         android:hint="@string/name"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_title" />

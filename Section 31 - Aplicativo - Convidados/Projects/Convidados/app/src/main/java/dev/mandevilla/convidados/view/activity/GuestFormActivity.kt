@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import dev.mandevilla.convidados.databinding.ActivityGuestFormBinding
+import dev.mandevilla.convidados.model.GuestModel
 import dev.mandevilla.convidados.viewmodel.activity.GuestFormViewModel
 
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
@@ -61,6 +62,14 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleButtonSaveClick() {
+        val name = binding.editTextGuestName.text.trim().toString()
+        val presence = binding.radioButtonPresent.isChecked
 
+        val guest = GuestModel(
+            name = name,
+            presence = presence
+        )
+        val inserted = viewModel.insert(guest)
+        println(inserted)
     }
 }
