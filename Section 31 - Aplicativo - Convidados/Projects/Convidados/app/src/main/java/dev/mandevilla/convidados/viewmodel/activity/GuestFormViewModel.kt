@@ -25,8 +25,4 @@ class GuestFormViewModel(application: Application) : AndroidViewModel(applicatio
     fun insert(guest: GuestModel): Boolean {
         return repository.insert(guest) > 0
     }
-
-    fun update(guest: GuestModel): Boolean {
-        return repository.update(guest) > 0
-    }
 }

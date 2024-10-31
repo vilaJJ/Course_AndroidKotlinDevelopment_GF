@@ -14,6 +14,8 @@ class GuestDatabaseConstants private constructor() {
             const val ID = "id"
             const val NAME = "name"
             const val PRESENCE = "presence"
+
+            val all = arrayOf(ID, NAME, PRESENCE)
         }
     }
 }
