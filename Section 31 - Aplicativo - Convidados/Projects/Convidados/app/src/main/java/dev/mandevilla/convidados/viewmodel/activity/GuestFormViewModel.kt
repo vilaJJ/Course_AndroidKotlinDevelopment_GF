@@ -10,19 +10,34 @@ import dev.mandevilla.convidados.repository.GuestRepository
 class GuestFormViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = GuestRepository.getInstance(application)
 
-    private val isPresent = MutableLiveData<Boolean>()
+    private val _name = MutableLiveData<String>()
+    private val _isPresent = MutableLiveData(true)
 
-    init {
-        isPresent.value = true
-    }
-
-    fun isPresent(): LiveData<Boolean> = isPresent
+    val name: LiveData<String> = _name
+    val isPresent: LiveData<Boolean> = _isPresent
 
     fun updatePresentState(isPresent: Boolean) {
-        this.isPresent.value = isPresent
+        this._isPresent.value = isPresent
     }
 
-    fun insert(guest: GuestModel): Boolean {
-        return repository.insert(guest) > 0
+    fun saveGuest(guest: GuestModel) {
+        if (guest.id == 0)
+            insertGuest(guest)
+        else
+            updateGuest(guest)
+    }
+
+    private fun insertGuest(guest: GuestModel) {
+        repository.insert(guest)
+    }
+
+    private fun updateGuest(guest: GuestModel) {
+        repository.update(guest)
+    }
+
+    fun loadGuest(id: Int) {
+        val guest = repository.getById(id) ?: return
+        _name.value = guest.name
+        _isPresent.value = guest.presence
     }
 }

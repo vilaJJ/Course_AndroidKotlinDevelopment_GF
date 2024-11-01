@@ -28,6 +28,18 @@ class GuestRepository private constructor(context: Context) {
         }
     }
 
+    fun getById(id: Int): GuestModel? {
+        return try {
+            val idColumnName = GuestDatabaseConstants.Guest.Columns.ID
+            val whereClause = "$idColumnName = ?"
+            val whereValues = arrayOf(id.toString())
+
+            select(whereClause, whereValues).firstOrNull()
+        } catch (_: Exception) {
+            null
+        }
+    }
+
     fun getByPresence(isPresent: Boolean): List<GuestModel> {
         return try {
             val presenceColumnName = GuestDatabaseConstants.Guest.Columns.PRESENCE

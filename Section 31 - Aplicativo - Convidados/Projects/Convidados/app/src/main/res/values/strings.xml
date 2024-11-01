@@ -12,10 +12,18 @@
     <string name="menu_absents">Absents</string>
     <string name="a_floating_action_button_to_add_a_guest">A Floating Action Button to add a guest.</string>
     <string name="guest_register">Guest register</string>
+    <string name="guest_update">Guest update</string>
     <string name="name">Name</string>
     <string name="presence">Presence</string>
     <string name="present">Present</string>
     <string name="absent">Absent</string>
     <string name="save">Save</string>
+    <string name="update">Update</string>
     <string name="guest_name">Guest name</string>
+    <string name="guest_removal">Guest Removal</string>
+    <string name="guest_name_constraint">GUEST_NAME</string>
+    <string name="guest_removal_question">Are you sure do you want to remove the guest GUEST_NAME?</string>
+    <string name="guest_removal_confirmation">The guest GUEST_NAME has been removed.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
