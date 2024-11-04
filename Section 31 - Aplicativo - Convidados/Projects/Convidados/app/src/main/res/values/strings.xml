@@ -2,8 +2,8 @@
     <string name="app_name">Guests</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title" translatable="false">Juan Felipe Alves Flores</string>
+    <string name="nav_header_subtitle" translatable="false">juan.felipe.alves.flores@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -21,9 +21,13 @@
     <string name="update">Update</string>
     <string name="guest_name">Guest name</string>
     <string name="guest_removal">Guest Removal</string>
-    <string name="guest_name_constraint">GUEST_NAME</string>
+    <string name="guest_name_constraint" translatable="false">GUEST_NAME</string>
     <string name="guest_removal_question">Are you sure do you want to remove the guest GUEST_NAME?</string>
     <string name="guest_removal_confirmation">The guest GUEST_NAME has been removed.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="guest_successfully_added">Guest successfully added.</string>
+    <string name="guest_updated_successfully">Guest updated successfully.</string>
+    <string name="unable_add_guest">Unable to add guest.</string>
+    <string name="unable_update_guest">Unable to update guest.</string>
 </resources>

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,22 +14,22 @@ import dev.mandevilla.convidados.model.GuestModel
 import dev.mandevilla.convidados.view.activity.GuestFormActivity
 import dev.mandevilla.convidados.view.adapter.GuestsAdapter
 import dev.mandevilla.convidados.view.listener.OnGuestListener
-import dev.mandevilla.convidados.viewmodel.fragment.AllGuestsViewModel
+import dev.mandevilla.convidados.viewmodel.fragment.GuestsViewModel
 
 class AllGuestsFragment : Fragment() {
-    private lateinit var viewModel: AllGuestsViewModel
-
-    private val binding get() = _binding!!
-    private val adapter = GuestsAdapter()
+    private lateinit var viewModel: GuestsViewModel
 
     private var _binding: FragmentAllGuestsBinding? = null
+    private val binding get() = _binding!!
+
+    private val adapter = GuestsAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProvider(this)[AllGuestsViewModel::class.java]
+        viewModel = ViewModelProvider(this)[GuestsViewModel::class.java]
         _binding = FragmentAllGuestsBinding.inflate(inflater, container, false)
 
         setObservers()
@@ -63,10 +62,9 @@ class AllGuestsFragment : Fragment() {
         adapter.attachListener(object : OnGuestListener {
             override fun onClick(guest: GuestModel) {
                 val intent = Intent(context, GuestFormActivity::class.java)
-
                 val bundle = Bundle()
-                bundle.putInt(GuestDatabaseConstants.Guest.Columns.ID, guest.id)
 
+                bundle.putInt(GuestDatabaseConstants.Guest.Columns.ID, guest.id)
                 intent.putExtras(bundle)
                 startActivity(intent)
             }

@@ -2,6 +2,7 @@ package dev.mandevilla.convidados.view.activity
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,8 +17,6 @@ import dev.mandevilla.convidados.viewmodel.activity.GuestFormViewModel
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityGuestFormBinding
     private lateinit var viewModel: GuestFormViewModel
-
-    private var guestId: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +68,7 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun loadData() {
         val bundle = intent.extras ?: return
-        guestId = bundle.getInt(GuestDatabaseConstants.Guest.Columns.ID)
+        viewModel.setGuestId(bundle.getInt(GuestDatabaseConstants.Guest.Columns.ID))
         setupActivityToUpdateGuest()
         getGuestById()
     }
@@ -92,18 +91,24 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
             presence = presence
         )
 
-        if (guestId != null)
-            guest.id = guestId!!
+        if (viewModel.guestId != null)
+            guest.id = viewModel.guestId!!
 
-        saveGuest(guest)
-        finish()
+        val result = saveGuest(guest)
+        showToast(result.messageId)
+
+        if (result.success) {
+            finish()
+        }
     }
 
     private fun getGuestById() {
-        if (guestId == null)
-            return
-        viewModel.loadGuest(guestId!!)
+        viewModel.loadGuest()
     }
 
     private fun saveGuest(guest: GuestModel) = viewModel.saveGuest(guest)
+
+    private fun showToast(resourceId: Int) {
+        Toast.makeText(applicationContext, resourceId, Toast.LENGTH_SHORT).show()
+    }
 }
