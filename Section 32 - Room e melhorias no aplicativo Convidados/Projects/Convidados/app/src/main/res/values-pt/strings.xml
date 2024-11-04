@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Convidados</string>
+    <string name="navigation_drawer_open">Abrir a gaveta de navegação</string>
+    <string name="navigation_drawer_close">Fechar a gaveta de navegação</string>
+    <string name="nav_header_desc">Cabeçalho da navegação</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_all_guests">Todos os Convidados</string>
+    <string name="menu_presents">Presentes</string>
+    <string name="menu_absents">Ausentes</string>
+    <string name="a_floating_action_button_to_add_a_guest">Um botão flutuante de ação para adicionar um convidado.</string>
+    <string name="guest_register">Cadastrar convidado</string>
+    <string name="guest_update">Atualizar convidado</string>
+    <string name="name">Nome</string>
+    <string name="presence">Presença</string>
+    <string name="present">Presente</string>
+    <string name="absent">Ausente</string>
+    <string name="save">Salvar</string>
+    <string name="update">Atualizar</string>
+    <string name="guest_name">Nome do convidado</string>
+    <string name="guest_removal">Remoção de convidado</string>
+    <string name="guest_removal_question">Você tem certeza de que deseja remover o convidado GUEST_NAME?</string>
+    <string name="guest_removal_confirmation">O convidado GUEST_NAME foi removido.</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="guest_successfully_added">Convidado adicionado com sucesso.</string>
+    <string name="guest_updated_successfully">Convidado atualizado com sucesso.</string>
+    <string name="unable_add_guest">Não foi possível adicionar o convidado.</string>
+    <string name="unable_update_guest">Não foi possível atualizar o convidado.</string>
+</resources>
