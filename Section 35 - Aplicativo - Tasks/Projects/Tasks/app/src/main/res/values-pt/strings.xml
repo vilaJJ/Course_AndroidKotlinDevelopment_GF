@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Tarefas</string>
+
+    <string name="error_unexpected">Um erro inesperado ocorreu. Tente novamente mais tarde.</string>
+    <string name="error_load_task">Erro ao carregar a tarefa.</string>
+    <string name="error_internet_connection">Conexão à internet necessária para uso da applicação.</string>
+    <string name="task_updated">Tarefa atualizada com sucesso!</string>
+    <string name="task_created">Tarefa criada com sucesso!</string>
+    <string name="task_removed">Tarefa removida com sucesso!</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="register">Cadastrar</string>
+    <string name="description">Descrição</string>
+    <string name="priority">Prioridade</string>
+    <string name="deadline">Data Limite</string>
+    <string name="update_task">Atualizar tarefa</string>
+    <string name="click_to_select_a_date">Clique para selecionar a data limite</string>
+    <string name="complete">Completa</string>
+    <string name="add_task">Adicionar tarefa</string>
+    <string name="yes">Sim</string>
+    <string name="cancel">Cancelar</string>
+    <string name="removal_task">Remoção de tarefa</string>
+    <string name="remove_task_question">Remover tarefa?</string>
+    <string name="dont_have_an_account">Não tem uma conta?</string>
+    <string name="sign_up">Cadastre-se</string>
+    <string name="sign_in">Entrar</string>
+    <string name="logout">Sair</string>
+    <string name="expired">Expiradas</string>
+    <string name="all_tasks">Todas as tarefas</string>
+    <string name="next_7_days">Próximos 7 dias</string>
+    <string name="a_floating_action_button">A Floating Action Button.</string>
+    <string name="username">Username</string>
+    <string name="a_image_of_application_icon">A image of application icon.</string>
+    <string name="settings">Settings</string>
+
+</resources>

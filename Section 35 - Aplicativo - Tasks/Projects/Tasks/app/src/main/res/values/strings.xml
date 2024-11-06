@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Tasks</string>
+
+    <string name="error_unexpected">An unexpected error occurred. Please try again later.</string>
+    <string name="error_load_task">Error loading task.</string>
+    <string name="error_internet_connection">Internet connection required to use the application.</string>
+    <string name="task_updated">Task updated successfully!</string>
+    <string name="task_created">Task created successfully!</string>
+    <string name="task_removed">Task removed successfully!</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password">Passowrd</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="description">Description</string>
+    <string name="priority">Priority</string>
+    <string name="deadline">Deadline</string>
+    <string name="update_task">Update task</string>
+    <string name="click_to_select_a_date">Click to select a date</string>
+    <string name="complete">Complete</string>
+    <string name="add_task">Add task</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="removal_task">Removal task</string>
+    <string name="remove_task_question">Remove task?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Entrar</string>
+    <string name="logout">Logout</string>
+    <string name="expired">Expired</string>
+    <string name="all_tasks">All tasks</string>
+    <string name="next_7_days">Next 7 days</string>
+    <string name="a_floating_action_button">A Floating Action Button.</string>
+    <string name="username">Username</string>
+    <string name="a_image_of_application_icon">A image of application icon.</string>
+    <string name="settings">Settings</string>
+</resources>
