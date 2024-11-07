@@ -21,7 +21,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         observe()
     }
 
-    override fun onClick(v: View) {
+    override fun onClick(view: View?) {
+        when (view?.id) {
+            binding.buttonLogin.id -> handleLogin()
+        }
     }
 
     private fun setOnClickListeners() {
@@ -30,5 +33,12 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun observe() {
+    }
+
+    private fun handleLogin() {
+        val email = binding.editEmail.text.toString()
+        val password = binding.editPassword.text.toString()
+
+        viewModel.doLogin(email, password)
     }
 }
