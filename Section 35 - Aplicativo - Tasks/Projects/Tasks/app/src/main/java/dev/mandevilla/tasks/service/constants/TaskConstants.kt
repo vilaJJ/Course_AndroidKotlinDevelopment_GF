@@ -3,7 +3,7 @@ package dev.mandevilla.tasks.service.constants
 class TaskConstants private constructor() {
     object SharedKeys {
         const val TOKEN = "tokenkey"
-        const val PERSON = "personkey"
+        const val PERSON_KEY = "personkey"
         const val PERSON_NAME = "personname"
     }
 

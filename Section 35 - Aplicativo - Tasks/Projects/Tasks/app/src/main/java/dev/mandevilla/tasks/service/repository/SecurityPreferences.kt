@@ -7,15 +7,17 @@ class SecurityPreferences(context: Context) {
     private val preferences: SharedPreferences =
         context.getSharedPreferences("tasks_shared", Context.MODE_PRIVATE)
 
+    private val editor: SharedPreferences.Editor = preferences.edit()
+
     fun store(key: String, value: String) {
-        preferences.edit().putString(key, value).apply()
+        editor.putString(key, value).apply()
     }
 
     fun remove(key: String) {
-        preferences.edit().remove(key).apply()
+        editor.remove(key).apply()
     }
 
-    fun get(key: String): String {
-        return preferences.getString(key, "") ?: ""
+    fun get(key: String): String? {
+        return preferences.getString(key, null)
     }
 }
