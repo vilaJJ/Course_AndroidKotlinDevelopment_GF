@@ -9,12 +9,15 @@ import dev.mandevilla.tasks.domain.ValidationResult
 import dev.mandevilla.tasks.service.constants.TaskConstants
 import dev.mandevilla.tasks.service.listener.APIListener
 import dev.mandevilla.tasks.service.model.PersonModel
+import dev.mandevilla.tasks.service.model.PriorityModel
 import dev.mandevilla.tasks.service.repository.PersonRepository
+import dev.mandevilla.tasks.service.repository.PriorityRepository
 import dev.mandevilla.tasks.service.repository.SecurityPreferences
 import dev.mandevilla.tasks.service.repository.remote.RetrofitClient
 
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
     private val personRepository = PersonRepository(application)
+    private val priorityRepository = PriorityRepository(application)
     private val securityPreferences = SecurityPreferences(application)
 
     private val _validationResult = MutableLiveData<ValidationResult>()
@@ -47,6 +50,8 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
         if (isLogged)
             setHeaders(TaskHeaders(token!!, personKey!!))
+        else
+            downloadPriorityData()
 
         return isLogged
     }
@@ -62,5 +67,19 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun setHeaders(headers: TaskHeaders) {
         RetrofitClient.addHeaders(headers)
+    }
+
+    private fun downloadPriorityData() {
+        priorityRepository.downloadAll(object : APIListener<List<PriorityModel>> {
+            override fun onSuccess(result: List<PriorityModel>) {
+                priorityRepository.clear()
+                priorityRepository.insert(result)
+                val a = priorityRepository.select()
+            }
+
+            override fun onFailure(message: String) {
+                _validationResult.value = ValidationResult.getFailure(message)
+            }
+        })
     }
 }

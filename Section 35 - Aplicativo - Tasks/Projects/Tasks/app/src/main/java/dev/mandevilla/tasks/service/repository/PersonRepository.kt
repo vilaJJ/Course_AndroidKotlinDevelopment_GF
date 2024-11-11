@@ -1,8 +1,6 @@
 package dev.mandevilla.tasks.service.repository
 
 import android.content.Context
-import com.google.gson.Gson
-import dev.mandevilla.tasks.R
 import dev.mandevilla.tasks.service.constants.TaskConstants
 import dev.mandevilla.tasks.service.listener.APIListener
 import dev.mandevilla.tasks.service.model.PersonModel
@@ -12,7 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PersonRepository(private val context: Context) {
+class PersonRepository(context: Context) : BaseRepository(context) {
     private val remote = RetrofitClient.getService(PersonService::class.java)
 
     fun login(email: String, password: String, listener: APIListener<PersonModel>) {
@@ -34,12 +32,5 @@ class PersonRepository(private val context: Context) {
                 }
             })
         }
-    }
-
-    private fun failureResponse(errorBody: String? = null): String {
-        if (errorBody == null)
-            return context.getString(R.string.error_unexpected)
-
-        return Gson().fromJson(errorBody, String::class.java)
     }
 }
